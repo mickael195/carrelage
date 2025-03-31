@@ -1,0 +1,83 @@
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20">
+      <div class="flex items-center">
+        <a href="/">
+          <img
+            class="w-1/2"
+            src="/images/regis-drouin-carreleur-nantes-logo.png"
+            alt="regis-drouin-carreleur-nantes-logo"
+          />
+        </a>
+      </div>
+      <div class="hidden md:flex space-x-5 items-center">
+        <a href="/carrelage" class="text-black hover:text-orange-500"
+          >Carrelage</a
+        >
+        <a href="/salle-de-bains" class="text-black hover:text-orange-500"
+          >Salle de bains</a
+        >
+        <a href="/terrasse" class="text-black hover:text-orange-500"
+          >Terrasse</a
+        >
+        <a href="/realisation" class="text-black hover:text-orange-500"
+          >Réalisation</a
+        >
+        <a href="/contact" class="text-black hover:text-orange-500">Contact</a>
+      </div>
+      <div class="md:hidden menu-btn-container flex items-center">
+        <button id="menu-btn" class="text-gray-600 focus:outline-none">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--mobile-->
+  <div id="menu" class="hidden md:hidden bg-white shadow-md">
+    <a
+      href="/carrelage"
+      class="block px-4 py-2 text-black hover:bg-orange-500 text-center"
+      >Carrelage</a
+    >
+    <a
+      href="/salle-de-bains"
+      class="block px-4 py-2 text-black hover:bg-orange-500 text-center"
+      >Salle de bains</a
+    >
+    <a
+      href="/terrasse"
+      class="block px-4 py-2 text-black hover:bg-orange-500 text-center"
+      >Terrasse</a
+    >
+    <a
+      href="/realisations"
+      class="block px-4 py-2 text-black hover:bg-orange-500 text-center"
+      >Réalisation</a
+    >
+    <a
+      href="/contact"
+      class="block px-4 py-2 text-black hover:bg-orange-500 text-center"
+      >Contact</a
+    >
+  </div>
+</nav>
+
+<script>
+  document.getElementById("menu-btn").addEventListener("click", function () {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("hidden");
+  });
+</script>
