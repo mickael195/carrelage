@@ -1,0 +1,108 @@
+<div class="flex justify-center items-center min-h-screen">
+    <div
+      id="carouselExampleControls"
+      class="relative w-[900px] overflow-hidden h-[600px]"
+    >
+       <div class="carousel-inner relative w-full h-full">
+          <div
+            class="carousel-item absolute w-full h-full transition-opacity duration-500 opacity-100"
+          >
+            <img
+              class="w-full h-full rounded object-cover"
+              src="/images/regis-drouin-carreleur-nantes-salle-de-bain-6-768x1024.webp"
+              alt="First slide"
+            />
+          </div>
+          <div
+            class="carousel-item absolute w-full h-full transition-opacity duration-500 opacity-0"
+          >
+            <img
+              class="w-full h-full rounded object-cover"
+              src="/images/regis-drouin-carreleur-nantes-salle-de-bains.jpg"
+              alt="Second slide"
+            />
+          </div>
+          <div
+            class="carousel-item absolute w-full h-full transition-opacity duration-500 opacity-0"
+          >
+            <img
+              class="w-full h-full rounded object-cover"
+              src="/images/regis-drouin-carreleur-nantes-terrasse-1-scaled.webp"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+  
+        <button
+          class="carousel-control-prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true">←</span>
+          <span class="sr-only">Previous</span>
+        </button>
+  
+        <button
+          class="carousel-control-next absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true">→</span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.getElementById("carouselExampleControls");
+      const slides = carousel.querySelectorAll(".carousel-item");
+      const prevBtn = carousel.querySelector(".carousel-control-prev");
+      const nextBtn = carousel.querySelector(".carousel-control-next");
+      let activeSlide = 0;
+      let autoSlideInterval;
+      let autoSlideEnabled = true;
+      const slideInterval = 3000; // Intervalle de défilement en millisecondes (5 secondes)
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("opacity-0", i !== index);
+          slide.classList.toggle("opacity-100", i === index);
+        });
+        activeSlide = index;
+      }
+  
+      function nextSlide() {
+        const newIndex = activeSlide === slides.length - 1 ? 0 : activeSlide + 1;
+        showSlide(newIndex);
+      }
+  
+      function prevSlide() {
+        const newIndex = activeSlide === 0 ? slides.length - 1 : activeSlide - 1;
+        showSlide(newIndex);
+      }
+  
+      function startAutoSlide() {
+        if (autoSlideEnabled) {
+          autoSlideInterval = setInterval(nextSlide, slideInterval);
+        }
+      }
+  
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideEnabled = false;
+      }
+  
+      // Démarrer le défilement automatique au chargement
+      startAutoSlide();
+  
+      // Gestionnaires d'événements pour les boutons
+      prevBtn.addEventListener("click", () => {
+        stopAutoSlide();
+        prevSlide();
+      });
+  
+      nextBtn.addEventListener("click", () => {
+        stopAutoSlide();
+        nextSlide();
+      });
+    });
+  </script>
+  
