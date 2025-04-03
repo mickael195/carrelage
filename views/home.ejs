@@ -1,39 +1,34 @@
-<section class="hero text-white py-16 mx-8">
-  <div
-    class="container mx-auto flex flex-col md:flex-row items-center justify-between"
-  >
-    <!-- Texte à gauche -->
-    <div class="hero1 text-left md:w-1/2 mb-8 md:mb-0">
-      <h1 class="text-4xl text-black font-bold mb-4">Regis Drouin</h1>
-      <h3 class="text-2xl text-[#e8950f] font-bold mb-4">Artisan carreleur</h3>
-      <p class="text-xl text-gray-700 italic leading-relaxed mb-8">
-        Mon approche se distingue par un accompagnement complet et
-        personnalisé.<br />
-        Dès le début de votre projet, je vous conseille sur le choix des
-        matériaux,<br />
-        des motifs et des techniques de pose les plus adaptés à vos besoins<br />
-        et à votre budget. Que vous optiez pour du carrelage en<br />
-        céramique, en grès ou en porcelaine, je vous<br />
-        guide pour faire les meilleurs choix <br />esthétiques et fonctionnels.
-      </p>
-      <a
-        href="/contact"
-        class="bg-[#e8950f]  hover:bg-[#c87d08] text-white font-bold py-2 px-6 rounded-md transition duration-300"
-      >
-        Demander un devis
-      </a>
-    </div>
+<section class="relative min-h-screen overflow-hidden">
+  <!-- Image en fond -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/images/image1.jpg" 
+      alt="Regis Drouin, artisan carreleur"
+      class="w-full h-full object-cover object-center"
+      loading="lazy"
+    />
+    <!-- Overlay pour lisibilité -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent"></div>
+  </div>
 
-    <!-- Image à droite -->
-    <div class="md:w-1/2">
-      <img
-        src="/images/image1.jpg"
-        alt="Image illustrant Regis Drouin"
-        class="rounded-lg shadow-lg w-full"
-      />
+  <!-- Contenu texte -->
+  <div class="hero container relative z-10 min-h-screen mx-auto flex items-center px-4 py-24">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Regis Drouin
+      </h1>
+      <h2 class="text-2xl md:text-3xl font-semibold text-[#e8950f] mb-8">
+        Artisan carreleur
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 italic leading-relaxed mb-12">
+        Mon approche se distingue par un accompagnement complet et personnalisé. 
+        Dès le début de votre projet, je vous conseille sur le choix des matériaux, 
+        des motifs et des techniques de pose les plus adaptés à vos besoins et à votre budget.
+      </p>
     </div>
   </div>
 </section>
+
 
 <section class="bg-white py-12 mx-8">
   <div class="container mx-auto text-center max-w-4xl">
@@ -49,7 +44,7 @@
     <!-- Bouton centré -->
     <a
       href="/contact"
-      class="bg-[#e8950f]  hover:bg-[#c87d08] text-white font-bold py-3 px-8 rounded-md transition duration-300 inline-block"
+      class="bg-[#e8950f] hover:bg-[#c87d08] text-white font-bold py-3 px-8 rounded-md transition duration-300 inline-block"
     >
       Demander un devis
     </a>
@@ -58,7 +53,7 @@
 
 <section class="services py-12 mx-8">
   <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-bold text-center mb-8">Nos Services</h2>
+    <h3 class="text-3xl font-bold text-center mb-8">Nos Services</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       <!-- Carte 1 - Carrelage -->
       <a href="/carrelage">
@@ -107,7 +102,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const heroSection = document.querySelector(".hero1");
+    const heroSection = document.querySelector(".hero");
     heroSection.classList.add("slide-in");
   });
 </script>
