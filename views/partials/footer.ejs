@@ -1,25 +1,145 @@
 <footer class="bg-black text-white p-6 mt-8">
-  <div class="container mx-auto">
-    <div class="flex flex-col md:flex-row justify-between">
-      <div class="mb-4 md:mb-0">
-        <h3 class="text-xl font-bold mb-2">Regis Drouin Carreleur</h3>
-        <p>Professionnel du carrelage à Nantes</p>
-      </div>
-      <div class="mb-4 md:mb-0">
-        <h3 class="text-xl font-bold mb-2">Contact</h3>
-        <p>Email: contact@regisdrouin.fr</p>
-        <p>Téléphone: 07 77 39 16 77</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-2">Horaires</h3>
-        <p>Lundi - Vendredi: 8h-12h | 14h-18h</p>
+  <!-- Footer principal avec fond noir texturé -->
+  <footer
+    class="relative bg-black text-white"
+    style="background-image: url('chemin-vers-votre-texture-marbre.jpg')"
+  >
+    <!-- Contenu principal du footer -->
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Colonne Menu -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Menu</h3>
+          <div class="w-16 h-1 bg-amber-500 mb-4"></div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-amber-500">Accueil</a></li>
+            <li><a href="#" class="hover:text-amber-500">REGIS DROUIN</a></li>
+            <li><a href="#" class="hover:text-amber-500">Réalisations</a></li>
+            <li><a href="#" class="hover:text-amber-500">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne Prestations -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Prestations</h3>
+          <div class="w-16 h-1 bg-amber-500 mb-4"></div>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-amber-500">Carrelage</a>
+            </li>
+            <li><a href="#" class="hover:text-amber-500">Salle de bains</a></li>
+            <li><a href="#" class="hover:text-amber-500">Terrasse</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne Nos coordonnées -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Nos coordonnées</h3>
+          <div class="w-16 h-1 bg-amber-500 mb-4"></div>
+
+          <!-- Téléphone -->
+          <div class="flex items-center mb-4">
+            <div
+              class="w-8 h-8 mr-3 flex items-center justify-center bg-amber-500 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold">TÉLÉPHONE</h4>
+              <p>07 77 39 16 77</p>
+            </div>
+          </div>
+
+          <!-- Adresse -->
+          <div class="flex items-center mb-4">
+            <div
+              class="w-8 h-8 mr-3 flex items-center justify-center bg-amber-500 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold">RETROUVEZ-NOUS</h4>
+              <p>23 Glasnet</p>
+              <p>44810 Héric</p>
+            </div>
+          </div>
+
+          <!-- Horaires -->
+          <div class="flex items-center">
+            <div
+              class="w-8 h-8 mr-3 flex items-center justify-center bg-amber-500 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold">HORAIRES</h4>
+              <p>Du Lundi au Vendredi :</p>
+              <p>08h-12h | 14h-18h</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne Retrouvez-nous -->
+        <div>
+          <h3 class="text-xl font-bold mb-2">Retrouvez-nous</h3>
+          <div class="w-16 h-1 bg-amber-500 mb-4"></div>
+
+          <div class="mb-4">
+            <a
+              href="#"
+              class="inline-block px-4 py-1 bg-gray-800 hover:bg-gray-700 rounded"
+            >
+              Facebook
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="mt-10 text-center">
-      <p>
-        &copy; <%= new Date().getFullYear() %> Regis Drouin Carreleur. Tous
-        droits réservés.
-      </p>
     </div>
-  </div>
+  </footer>
 </footer>
