@@ -1,108 +1,129 @@
-<div class="flex justify-center items-center min-h-screen">
-    <div
-      id="carouselExampleControls"
-      class="relative w-[900px] overflow-hidden h-[600px]"
-    >
-       <div class="carousel-inner relative w-full h-full">
-          <div
-            class="carousel-item absolute w-full h-full transition-opacity duration-500 opacity-100"
-          >
-            <img
-              class="w-full h-full rounded object-cover"
-              src="/images/regis-drouin-carreleur-nantes-salle-de-bain-6-768x1024.webp"
-              alt="First slide"
-            />
-          </div>
-          <div
-            class="carousel-item absolute w-full h-full transition-opacity duration-500 opacity-0"
-          >
-            <img
-              class="w-full h-full rounded object-cover"
-              src="/images/regis-drouin-carreleur-nantes-salle-de-bains.jpg"
-              alt="Second slide"
-            />
-          </div>
-          <div
-            class="carousel-item absolute w-full h-full transition-opacity duration-500 opacity-0"
-          >
-            <img
-              class="w-full h-full rounded object-cover"
-              src="/images/regis-drouin-carreleur-nantes-terrasse-1-scaled.webp"
-              alt="Third slide"
-            />
-          </div>
-        </div>
+<!-- Contenu principal - Section Réalisations -->
+<main class="container mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold text-center my-8">RÉALISATIONS</h1>
   
-        <button
-          class="carousel-control-prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true">←</span>
-          <span class="sr-only">Previous</span>
-        </button>
-  
-        <button
-          class="carousel-control-next absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true">→</span>
-          <span class="sr-only">Next</span>
-        </button>
+  <!-- Section Sol -->
+  <section class="mb-16" id="plancher">
+      <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-gray-300">Sol</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="overflow-hidden rounded-lg shadow-lg">
+              <img 
+                  src="/images/sol.webp" 
+                  alt="Plancher en bois verni" 
+                  class="w-full h-64 object-cover cursor-pointer transition duration-300 hover:scale-105"
+                  onclick="openModal(this.src, this.alt)">
+              <div class="p-4 bg-white">
+                  <h3 class="font-medium">Plancher en bois verni</h3>
+                  <p class="text-gray-600 text-sm">Finition brillante, pièce lumineuse</p>
+              </div>
+          </div>
+          <!-- Vous pouvez ajouter d'autres réalisations de plancher ici -->
       </div>
-    </div>
+  </section>
+
+  <!-- Section Salle de bain -->
+  <section class="mb-16" id="salledebain">
+      <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-gray-300">Salle de bain</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="overflow-hidden rounded-lg shadow-lg">
+              <img 
+                  src="/images/regis-drouin-carreleur-nantes-salle-de-bains.jpg" 
+                  alt="Baignoire avec carrelage coloré" 
+                  class="w-full h-64 object-cover cursor-pointer transition duration-300 hover:scale-105"
+                  onclick="openModal(this.src, this.alt)">
+              <div class="p-4 bg-white">
+                  <h3 class="font-medium">Baignoire moderne</h3>
+                  <p class="text-gray-600 text-sm">Carrelage décoratif multicolore</p>
+              </div>
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-lg">
+              <img 
+                  src="/images/douche.webp" 
+                  alt="Douche à l'italienne" 
+                  class="w-full h-64 object-cover cursor-pointer transition duration-300 hover:scale-105"
+                  onclick="openModal(this.src, this.alt)">
+              <div class="p-4 bg-white">
+                  <h3 class="font-medium">Douche à l'italienne</h3>
+                  <p class="text-gray-600 text-sm">Carrelage beige avec bande décorative</p>
+              </div>
+          </div>
+          <!-- Vous pouvez ajouter d'autres réalisations de salle de bain ici -->
+      </div>
+  </section>
+
+  <!-- Section Terrasse -->
+  <section class="mb-16" id="terrasse">
+      <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-gray-300">Terrasse</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="overflow-hidden rounded-lg shadow-lg">
+              <img 
+                  src="/images/regis-drouin-carreleur-nantes-NoPath-Copie.webp" 
+                  alt="Terrasse en pavés" 
+                  class="w-full h-64 object-cover cursor-pointer transition duration-300 hover:scale-105"
+                  onclick="openModal(this.src, this.alt)">
+              <div class="p-4 bg-white">
+                  <h3 class="font-medium">Terrasse en pavés</h3>
+                  <p class="text-gray-600 text-sm">Aménagement extérieur avec mobilier de jardin</p>
+              </div>
+          </div>
+          <!-- Vous pouvez ajouter d'autres réalisations de terrasse ici -->
+          <div class="overflow-hidden rounded-lg shadow-lg">
+            <img 
+                src="/images/regis-drouin-carreleur-nantes-terrasse-1-scaled.webp" 
+                alt="Terrasse en pavés" 
+                class="w-full h-64 object-cover cursor-pointer transition duration-300 hover:scale-105"
+                onclick="openModal(this.src, this.alt)">
+            <div class="p-4 bg-white">
+                <h3 class="font-medium">Terrasse en pavés</h3>
+                <p class="text-gray-600 text-sm">Aménagement extérieur avec mobilier de jardin</p>
+            </div>
+        </div>
+      </div>
+  </section>
+</main>
+
+<!-- Modal pour l'agrandissement des images -->
+<div id="imageModal" class="fixed hidden inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+  <div class="relative">
+      <img id="modalImage" class="max-h-screen max-w-screen-lg" src="" alt="Image agrandie">
+      <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl font-bold">&times;</button>
   </div>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.getElementById("carouselExampleControls");
-      const slides = carousel.querySelectorAll(".carousel-item");
-      const prevBtn = carousel.querySelector(".carousel-control-prev");
-      const nextBtn = carousel.querySelector(".carousel-control-next");
-      let activeSlide = 0;
-      let autoSlideInterval;
-      let autoSlideEnabled = true;
-      const slideInterval = 3000; // Intervalle de défilement en millisecondes (5 secondes)
-  
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle("opacity-0", i !== index);
-          slide.classList.toggle("opacity-100", i === index);
-        });
-        activeSlide = index;
+</div>
+
+<!-- Script pour la modal -->
+<script>
+  // Fonction pour ouvrir la modal avec l'image agrandie
+  function openModal(imgSrc, imgAlt) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      
+      modal.classList.remove('hidden');
+      modalImg.src = imgSrc;
+      modalImg.alt = imgAlt;
+      
+      // Empêcher le défilement du body
+      document.body.style.overflow = 'hidden';
+  }
+
+  // Fermer la modal en cliquant sur le bouton de fermeture
+  document.getElementById('closeModal').addEventListener('click', function() {
+      document.getElementById('imageModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+  });
+
+  // Fermer la modal en cliquant n'importe où à l'extérieur de l'image
+  document.getElementById('imageModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+          this.classList.add('hidden');
+          document.body.style.overflow = 'auto';
       }
-  
-      function nextSlide() {
-        const newIndex = activeSlide === slides.length - 1 ? 0 : activeSlide + 1;
-        showSlide(newIndex);
+  });
+
+  // Fermer la modal avec la touche Escape
+  document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && !document.getElementById('imageModal').classList.contains('hidden')) {
+          document.getElementById('imageModal').classList.add('hidden');
+          document.body.style.overflow = 'auto';
       }
-  
-      function prevSlide() {
-        const newIndex = activeSlide === 0 ? slides.length - 1 : activeSlide - 1;
-        showSlide(newIndex);
-      }
-  
-      function startAutoSlide() {
-        if (autoSlideEnabled) {
-          autoSlideInterval = setInterval(nextSlide, slideInterval);
-        }
-      }
-  
-      function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideEnabled = false;
-      }
-  
-      // Démarrer le défilement automatique au chargement
-      startAutoSlide();
-  
-      // Gestionnaires d'événements pour les boutons
-      prevBtn.addEventListener("click", () => {
-        stopAutoSlide();
-        prevSlide();
-      });
-  
-      nextBtn.addEventListener("click", () => {
-        stopAutoSlide();
-        nextSlide();
-      });
-    });
-  </script>
-  
+  });
+</script>
