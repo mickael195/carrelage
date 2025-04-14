@@ -12,3 +12,17 @@
 .slide-in {
   animation: slideIn 1s ease-out;
 }
+
+/* ------------------------- */
+
+.relative.min-h-screen {
+  aspect-ratio: 16/9; /* Ajustez selon le ratio de votre image originale */
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .relative.min-h-screen {
+    aspect-ratio: 4/5; /* Ratio adapté aux mobiles */
+  }
+}
+
