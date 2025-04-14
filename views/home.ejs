@@ -40,53 +40,41 @@
 
 <section class="bg-white py-16">
   <div class="container mx-auto px-4">
-    <!-- Titre centré avec espacement -->
-    <h3
-      class="text-center font-semibold text-2xl uppercase tracking-wider mb-12" 
-    >
-      RÉALISATIONS
-    </h3>
-
-    <!-- Grille responsive -->
+    <h3 class="text-center font-semibold text-2xl uppercase tracking-wider mb-12">RÉALISATIONS</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <!-- Carte 1 - Plafond Rampant -->
-      <div class="relative group overflow-hidden cursor-pointer">
-        <img
-          src="/images/regis-drouin-carreleur-nantes-carrelage-2.jpg"
-          alt="Plafond rampant"
-          class="w-full h-80 object-cover transition duration-300 group-hover:scale-105"
-        />
-      </div>
-
-      <!-- Carte 2 - Plafond Décoratif -->
-      <div class="relative group overflow-hidden cursor-pointer">
-        <img
-          src="/images/regis-drouin-carreleur-nantes-Specialiste-en-pose-de-carrelage-1.jpg"
-          alt="Plafond décoratif"
-          class="w-full h-80 object-cover transition duration-300 group-hover:scale-105"
-        />
-      </div>
-
-      <!-- Carte 3 - Portes Intérieur -->
-      <div class="relative group overflow-hidden cursor-pointer">
-        <img
-          src="/images/regis-drouin-carreleur-nantes-carrelage-de-votre-salle-de-bains-2.jpg"
-          alt="Portes intérieur"
-          class="w-full h-80 object-cover transition duration-300 group-hover:scale-105"
-        />
-      </div>
-
-      <!-- Carte 4 - Portes et Verrières -->
-      <div class="relative group overflow-hidden cursor-pointer">
-        <img
-          src="/images/regis-drouin-carreleur-nantes-NoPath-Copie.webp"
-          alt="Portes et verrières"
-          class="w-full h-80 object-cover transition duration-300 group-hover:scale-105"
-        />
-      </div>
+      
+      <a href="/images/regis-drouin-carreleur-nantes-carrelage-2.jpg" class="group">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:bg-[#e8950f] hover:shadow-lg transition duration-300 h-[400px] flex flex-col">
+          <h3 class="text-xl font-semibold mb-4">carrelage imitation parquet</h3>
+          <img class="rounded w-full h-[300px] object-cover" src="/images/regis-drouin-carreleur-nantes-carrelage-2.jpg" alt="Plafond rampant" />
+        </div>
+      </a>
+      
+      <a href="/images/regis-drouin-carreleur-nantes-Specialiste-en-pose-de-carrelage-1.jpg" class="group">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:bg-[#e8950f] hover:shadow-lg transition duration-300 h-[400px] flex flex-col">
+          <h3 class="text-xl font-semibold mb-4">faince et tablier</h3>
+          <img class="rounded w-full h-[300px] object-cover" src="/images/regis-drouin-carreleur-nantes-Specialiste-en-pose-de-carrelage-1.jpg" alt="Plafond décoratif" />
+        </div>
+      </a>
+      
+      <a href="/images/regis-drouin-carreleur-nantes-carrelage-de-votre-salle-de-bains-2.jpg" class="group">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:bg-[#e8950f] hover:shadow-lg transition duration-300 h-[400px] flex flex-col">
+          <h3 class="text-xl font-semibold mb-4">douche à l'italienne</h3>
+          <img class="rounded w-full h-[300px] object-cover" src="/images/regis-drouin-carreleur-nantes-carrelage-de-votre-salle-de-bains-2.jpg" alt="Portes intérieur" />
+        </div>
+      </a>
+      
+      <a href="/images/regis-drouin-carreleur-nantes-NoPath-Copie.webp" class="group">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:bg-[#e8950f] hover:shadow-lg transition duration-300 h-[400px] flex flex-col">
+          <h3 class="text-xl font-semibold mb-4">pavé 10 x 10</h3>
+          <img class="rounded w-full h-[300px] object-cover" src="/images/regis-drouin-carreleur-nantes-NoPath-Copie.webp" alt="Portes et verrières" />
+        </div>
+      </a>
+      
     </div>
   </div>
 </section>
+
 
 <section class="bg-white py-12 mx-8">
   <div class="container mx-auto text-center max-w-4xl">
@@ -111,7 +99,7 @@
 
 <section class="services py-12 mx-8">
   <div class="container mx-auto text-center">
-    <h3 class="text-3xl font-semibold text-center mb-8">Nos Services</h3>
+    <h3 class="text-3xl font-bold text-center mb-8">Nos Services</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       <!-- Carte 1 - Carrelage -->
       <a href="/carrelage">
@@ -321,5 +309,151 @@
     // Animation du texte (script existant)
     const heroSection = document.querySelector(".hero");
     heroSection.classList.add("slide-in");
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Sélectionner les images dans la section RÉALISATIONS
+    // Utiliser un sélecteur plus précis pour cibler exactement vos images
+    let currentIndex = 0;
+    const images = Array.from(document.querySelectorAll('.bg-white.py-16 .grid img'));
+    
+    // Fonction pour afficher l'image en plein écran
+    function showImage(index) {
+      // Créer la div de fond pour l'affichage plein écran
+      const fullScreenDiv = document.createElement('div');
+      fullScreenDiv.style.position = 'fixed';
+      fullScreenDiv.style.top = '0';
+      fullScreenDiv.style.left = '0';
+      fullScreenDiv.style.width = '100%';
+      fullScreenDiv.style.height = '100%';
+      fullScreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; // Fond plus sombre pour meilleur contraste
+      fullScreenDiv.style.display = 'flex';
+      fullScreenDiv.style.justifyContent = 'center';
+      fullScreenDiv.style.alignItems = 'center';
+      fullScreenDiv.style.zIndex = '9999'; // Z-index élevé pour être au-dessus de tout
+
+      // Créer l'élément image
+      const fullScreenImg = document.createElement('img');
+      fullScreenImg.src = images[index].src;
+      fullScreenImg.style.maxWidth = '85%';
+      fullScreenImg.style.maxHeight = '85%';
+      fullScreenImg.style.objectFit = 'contain';
+      
+      // Bouton suivant avec icône
+      const nextButton = document.createElement('div');
+      nextButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+      nextButton.style.position = 'absolute';
+      nextButton.style.right = '30px';
+      nextButton.style.top = '50%';
+      nextButton.style.transform = 'translateY(-50%)';
+      nextButton.style.backgroundColor = 'rgba(232, 149, 15, 0.7)'; // Couleur orange de votre thème
+      nextButton.style.borderRadius = '50%';
+      nextButton.style.width = '60px';
+      nextButton.style.height = '60px';
+      nextButton.style.display = 'flex';
+      nextButton.style.justifyContent = 'center';
+      nextButton.style.alignItems = 'center';
+      nextButton.style.cursor = 'pointer'; // Important pour indiquer que c'est cliquable
+      nextButton.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)'; // Ombre pour meilleure visibilité
+      
+      nextButton.addEventListener('mouseover', () => {
+        nextButton.style.backgroundColor = 'rgba(232, 149, 15, 0.9)';
+      });
+      nextButton.addEventListener('mouseout', () => {
+        nextButton.style.backgroundColor = 'rgba(232, 149, 15, 0.7)';
+      });
+      nextButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % images.length;
+        document.body.removeChild(fullScreenDiv);
+        showImage(currentIndex);
+      });
+
+      // Bouton précédent avec icône
+      const prevButton = document.createElement('div');
+      prevButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+      prevButton.style.position = 'absolute';
+      prevButton.style.left = '30px';
+      prevButton.style.top = '50%';
+      prevButton.style.transform = 'translateY(-50%)';
+      prevButton.style.backgroundColor = 'rgba(232, 149, 15, 0.7)';
+      prevButton.style.borderRadius = '50%';
+      prevButton.style.width = '60px';
+      prevButton.style.height = '60px';
+      prevButton.style.display = 'flex';
+      prevButton.style.justifyContent = 'center';
+      prevButton.style.alignItems = 'center';
+      prevButton.style.cursor = 'pointer';
+      prevButton.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+      
+      prevButton.addEventListener('mouseover', () => {
+        prevButton.style.backgroundColor = 'rgba(232, 149, 15, 0.9)';
+      });
+      prevButton.addEventListener('mouseout', () => {
+        prevButton.style.backgroundColor = 'rgba(232, 149, 15, 0.7)';
+      });
+      prevButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.body.removeChild(fullScreenDiv);
+        showImage(currentIndex);
+      });
+
+      // Bouton de fermeture
+      const closeButton = document.createElement('div');
+      closeButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+      closeButton.style.position = 'absolute';
+      closeButton.style.top = '20px';
+      closeButton.style.right = '20px';
+      closeButton.style.backgroundColor = 'rgba(232, 149, 15, 0.7)';
+      closeButton.style.borderRadius = '50%';
+      closeButton.style.width = '40px';
+      closeButton.style.height = '40px';
+      closeButton.style.display = 'flex';
+      closeButton.style.justifyContent = 'center';
+      closeButton.style.alignItems = 'center';
+      closeButton.style.cursor = 'pointer';
+      closeButton.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+      
+      closeButton.addEventListener('mouseover', () => {
+        closeButton.style.backgroundColor = 'rgba(232, 149, 15, 0.9)';
+      });
+      closeButton.addEventListener('mouseout', () => {
+        closeButton.style.backgroundColor = 'rgba(232, 149, 15, 0.7)';
+      });
+      closeButton.addEventListener('click', () => {
+        document.body.removeChild(fullScreenDiv);
+      });
+
+      // Ajouter tous les éléments au DOM
+      fullScreenDiv.appendChild(fullScreenImg);
+      fullScreenDiv.appendChild(nextButton);
+      fullScreenDiv.appendChild(prevButton);
+      fullScreenDiv.appendChild(closeButton);
+      document.body.appendChild(fullScreenDiv);
+
+      // Fermer en cliquant sur le fond
+      fullScreenDiv.addEventListener('click', (e) => {
+        if (e.target === fullScreenDiv) {
+          document.body.removeChild(fullScreenDiv);
+        }
+      });
+    }
+
+    // Attacher les événements de clic aux images
+    // Utiliser le sélecteur qui correspond à votre structure HTML actuelle
+    const cards = document.querySelectorAll('.bg-white.py-16 .grid .group');
+    cards.forEach((card, index) => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = index;
+        showImage(currentIndex);
+      });
+    });
+    
+    // Afficher un message dans la console pour vérifier que le script s'exécute
+    console.log('Script de galerie chargé avec', images.length, 'images');
   });
 </script>
