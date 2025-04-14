@@ -1,40 +1,48 @@
 <footer class="bg-black text-white p-6 mt-0">
-
-  <footer
-    class="relative bg-black text-white">
-
+  <div class="relative bg-black text-white">
     <!-- Contenu principal du footer -->
     <div class="container mx-auto px-4 py-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Colonne Menu -->
-        <div>
+      <!-- Version desktop : 4 colonnes, version mobile : 2 colonnes avec 2 rangées -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Colonne Menu (prend 1 colonne en mobile) -->
+        <div class="w-full">
           <h3 class="text-xl font-bold mb-2">Menu</h3>
           <div class="w-16 h-1 bg-amber-500 mb-4"></div>
           <ul class="space-y-2">
             <li><a href="/" class="hover:text-amber-500">Accueil</a></li>
-            <li><a href="/carrelage" class="hover:text-amber-500">Carrelage</a></li>
-            <li><a href="/salle-de-bains" class="hover:text-amber-500">Salle de bains</a></li>
-            <li><a href="/terrasse" class="hover:text-amber-500">Terrasse</a></li>
-            <li><a href="/realisation" class="hover:text-amber-500">Réalisations</a></li>
+            <li>
+              <a href="/carrelage" class="hover:text-amber-500">Carrelage</a>
+            </li>
+            <li>
+              <a href="/salle-de-bains" class="hover:text-amber-500"
+                >Salle de bains</a
+              >
+            </li>
+            <li>
+              <a href="/terrasse" class="hover:text-amber-500">Terrasse</a>
+            </li>
+            <li>
+              <a href="/realisation" class="hover:text-amber-500"
+                >Réalisations</a
+              >
+            </li>
             <li><a href="/contact" class="hover:text-amber-500">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Colonne Prestations -->
-        <div>
+        <!-- Colonne Prestations (prend 1 colonne en mobile) -->
+        <div class="w-full">
           <h3 class="text-xl font-bold mb-2">Prestations</h3>
           <div class="w-16 h-1 bg-amber-500 mb-4"></div>
           <ul class="space-y-2">
-            <li>
-              <a href="#" class="hover:text-amber-500">Carrelage</a>
-            </li>
+            <li><a href="#" class="hover:text-amber-500">Carrelage</a></li>
             <li><a href="#" class="hover:text-amber-500">Salle de bains</a></li>
             <li><a href="#" class="hover:text-amber-500">Terrasse</a></li>
           </ul>
         </div>
 
-        <!-- Colonne Nos coordonnées -->
-        <div>
+        <!-- Colonne Nos coordonnées (prend 1 colonne en mobile) -->
+        <div class="w-full">
           <h3 class="text-xl font-bold mb-2">Nos coordonnées</h3>
           <div class="w-16 h-1 bg-amber-500 mb-4"></div>
 
@@ -60,7 +68,9 @@
             </div>
             <div>
               <h4 class="font-bold">TÉLÉPHONE</h4>
-              <p>07 77 39 16 77</p>
+              <a href="tel:+33777391677" class="font-bold text-[#e8950f]"
+                >07 77 39 16 77</a
+              >
             </div>
           </div>
 
@@ -125,22 +135,19 @@
           </div>
         </div>
 
-        <!-- Colonne Retrouvez-nous -->
-        <div>
+        <!-- Colonne Retrouvez-nous (prend 1 colonne en mobile) -->
+        <div class="w-full">
           <h3 class="text-xl font-bold mb-2">Retrouvez-nous</h3>
           <div class="w-16 h-1 bg-amber-500 mb-4"></div>
-
           <div class="mb-4">
             <a
               href="#"
               class="inline-block px-4 py-1 bg-gray-800 hover:bg-gray-700 rounded"
+              >Facebook</a
             >
-              Facebook
-            </a>
           </div>
         </div>
       </div>
     </div>
-    </div>
-  </footer>
+  </div>
 </footer>
