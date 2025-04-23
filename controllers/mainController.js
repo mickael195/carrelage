@@ -20,6 +20,13 @@ exports.getSalleDeBainPage = (req, res) => {
   });
 };
 
+exports.getTerreCuite = (req, res) => {
+  res.render("terre-cuite", {
+    title: "Nos Réalisations - Regis Drouin Carreleur",
+    description: "Galerie de nos travaux de carrelage",
+  });
+};
+
 exports.getTerrassePage = (req, res) => {
   res.render("terrasse", {
     title: "À Propos - Regis Drouin Carreleur",
